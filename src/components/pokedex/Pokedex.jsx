@@ -31,7 +31,7 @@ const Pokedex = () => {
   };
   
   // puse la URL aca para hacer la paginacion, con el setUrl cambio la pagina.
-  const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon/')
+  const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon/?offset=1&limit=200')
 
   // uso este estado para acceder al next y previous de la paginacion
   const [p, setP] = useState() 
@@ -79,7 +79,7 @@ const Pokedex = () => {
             />
             <button onClick={c}>Buscar</button>
           </div>
-          <ListPokemons className='inputs-search-type'setUrl={setUrl} setTypePokemon={setTypePokemon} typePokemon={typePokemon}/>
+          <ListPokemons className='inputs-search-type'setUrl={setUrl} setTypePokemon={setTypePokemon}/>
         </div>
       </section>
       <section className="container-pagination">

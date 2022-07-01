@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const ListPokemons = ({setTypePokemon, typePokemon, setUrl}) => {
+const ListPokemons = ({setTypePokemon, setUrl}) => {
 
   const [typePokemons, setTypePokemons] = useState([]);
 
@@ -17,19 +17,18 @@ const ListPokemons = ({setTypePokemon, typePokemon, setUrl}) => {
         <div>
           <p>Busca los pokemones basandote en su tipo!</p>
         </div>
-        <button onClick={() => setUrl('https://pokeapi.co/api/v2/pokemon/')}>
+        <button onClick={() => setUrl('https://pokeapi.co/api/v2/pokemon/?offset=1&limit=200')}>
             Mostrar todos.
         </button>
         <div className='container-type-name-button'>
         {
           typePokemons.map(type => (
             <div key={type.url} className='button-type'>
-            <button onClick={() => setTypePokemon(type.name)}>{type?.name}</button>
+            <button onClick={() => setTypePokemon(type.name)}>{type.name}</button>
           </div>
           ))
         }
         </div>
-        <div>{typePokemon.name}</div>
       </div>
   );
 };
