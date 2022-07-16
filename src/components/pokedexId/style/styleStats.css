@@ -1,0 +1,84 @@
+.card-stats{
+    margin-top: 50px;
+    width: min(100%, 300px);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(243, 242, 243,0.6);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.card-stats:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 0 3px #FF1A4A;
+}
+
+.stats-title{
+    max-width: 100%;
+    margin: 20px 0 10px 0;
+}
+
+.stats-title p {
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: #113B49;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.stats-containter-items{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 20px 15px;
+}
+
+.stats-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0 0 0;
+}
+
+.item-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-name{
+    margin-left: 35px;
+    color: #113B49;
+    font-weight: 600;
+}
+
+.item-valor{
+    margin-right: 30px;
+    color: #113B49;
+    font-weight: 600;
+}
+
+.stats-color{
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+@media (min-width:720px){
+
+    .card-stats{
+        width: min(100%, 500px);
+        height: 500px;
+    }
+
+    .item-name{
+        font-size: 1.3rem;
+    }
+    
+    .item-valor{
+        font-size: 1.3rem;
+        margin-right: 80px;
+    }
+
+
+}

@@ -1,0 +1,102 @@
+/* movements */
+.card-container-movements{
+    width: min(90%, 400px);
+    padding: 20px 0;
+
+    background-color: rgba(243, 242, 243,0.6);
+    margin: 50px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #FF1A4A;
+}
+
+.movements__btn-filter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #000000;
+}
+
+.movements__btn-filter span {
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.fa-solid{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fa-solid:hover{
+    color: #FF1A4A;
+}
+
+.rotate-icon-open{
+    transform: rotate(90deg);
+    transition: 0.3s;
+    color: #FF1A4A;
+} 
+
+.open-list{
+    height: 200px;
+    transition: 1.3s;
+}
+
+.close-list{
+    height: 0;
+    transition: 1.3s;
+}
+
+/* contenedor de los tipos-lista */
+.movements-menu{
+    width: 100%;
+    transition: 1.3s;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.movements-menu::-webkit-scrollbar{
+    width: 5px;
+    background: #000000;
+}
+
+
+.movements-menu::-webkit-scrollbar-thumb{
+    background: #c72828;
+}
+
+.menu__items-container{
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__movements-name{
+    width: 100%;
+    text-align: center;
+}
+
+.movements-name{
+    font-weight: 600;
+    border: 1px solid #262525;
+    padding: 3px;
+    box-shadow: 0 0 2px #FF1A4A;
+}
+
+@media (min-width: 720px){
+    .card-container-movements{
+        width: min(90%, 700px);
+        margin-left: 100%;
+    }
+
+    .movements__btn-filter span{
+        font-size: 1.3rem;
+    }
+
+    .movements-name{
+        font-size: 1.1rem;
+    }
+}

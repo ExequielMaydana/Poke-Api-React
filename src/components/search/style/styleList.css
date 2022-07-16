@@ -1,0 +1,77 @@
+.container-types-list{
+    padding: 20px 0;
+}
+
+.btn-filter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+.icon{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon:hover{
+    color: #837a7c;
+}
+
+.rotate-icon-open{
+    transform: rotate(90deg);
+    transition: 0.3s;
+    color: #FF1A4A;
+} 
+
+/* boton que abre la lista de tipos */
+.open-list{
+    height: 100px;
+    transition: 1.3s;
+}
+
+.close-list{
+    height: 0;
+    transition: 1.3s;
+}
+
+/* contenedor de los tipos-lista */
+.container-list{
+    width: 100%;
+    transition: 1.3s;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+.list__show{
+    width: 100%;
+    cursor: pointer;
+    transition: 1.3s;
+}
+
+.list__inside{
+    list-style: none;
+    color: #ffffff;
+    padding: 0 30px;
+}
+
+.nav__link{
+    color: #ffffff;
+    background-color: #8686866e;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ffffff;
+}
+
+
+.container-list::-webkit-scrollbar{
+    width: 3px;
+}
+
+
+.container-list::-webkit-scrollbar-thumb{
+    background: #c72828;
+}

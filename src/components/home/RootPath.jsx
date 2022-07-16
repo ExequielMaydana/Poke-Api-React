@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import imgage from "../../assets/img/pokebienvenida.png";
 import { nameGlobal } from "../../store/slices/nameUser.slice";
-import Error from "../privateRoute/Error";
+import './style/styleRootPath.css'
 
 // ruta raiz
 const RootPath = ({setIsLogged}) => {
@@ -33,10 +32,10 @@ const RootPath = ({setIsLogged}) => {
 
   return (
     <article className="container-card-raiz">
-      <section className="card-img-welcome">
-        <img src={imgage} />
+      <section className="card-welcom-container">
+        <div className="card-welcom-text-input">
         <h1>¡Hola entrenador!</h1>
-        <p>Para poder comenzar, dame tu nombre</p>
+        <p>Para poder comenzar, dame tu nombre.</p>
         <div className="card-input">
           <input
             value={nameInput}
@@ -44,6 +43,7 @@ const RootPath = ({setIsLogged}) => {
             placeholder="Tu nombre..."
           />
           <button onClick={alertValue}>Comenzar</button>
+        </div>
         </div>
       </section>
     </article>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import gifimg from "../../assets/img/error.jpg";
+import './style/styleError.css'
 
 const Error = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Error = () => {
         <i className="fa-solid fa-arrow-left"></i>
       </button>
       <article className="error-card">
+        <div className="card-content">
         <h2>
           <span>Ups!</span>
           <br />
@@ -21,6 +23,7 @@ const Error = () => {
         <figure className="card-img">
           <img src={gifimg} />
         </figure>
+        </div>
       </article>
     </div>
   );

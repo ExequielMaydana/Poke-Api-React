@@ -1,0 +1,101 @@
+.container-card-raiz {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    background-image: url(../../../assets/img-home/fonndo1-full-hd.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.card-welcom-container{
+    background-color: rgba(190, 190, 190, 0.7);
+    width: min(90%, 600px);
+    border-radius: 5px;
+    box-shadow: 0 0 3px #f1f504;
+}
+
+.card-welcom-text-input{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-welcom-text-input h1 {
+    margin: 10% 0 5px 0;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.card-welcom-text-input p {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.card-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+
+.card-input input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 2px 2px 4px #212F3C;
+    color: #212F3C;
+    outline: none;
+}
+
+.card-input button {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgba(105, 105, 105, 0.733);
+    color: rgb(255, 230, 0);
+    border: none;
+    box-shadow: 2px 2px 4px #212F3C;
+}
+
+.card-input button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+@media (min-width: 720px){
+    
+    .card-input {
+        justify-content: center;
+    }
+
+    .card-welcom-container h1 {
+        font-size: 2rem;
+    }
+    
+    .card-welcom-container p {
+        font-size: 1.9rem;
+    }
+    
+    .card-input input {
+        font-size: 1rem;
+    }
+    
+    .card-input button {
+        font-size: 1rem;
+    }
+}

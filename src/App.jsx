@@ -1,15 +1,9 @@
 import "./App.css";
-import "./style/RootPathStyles.css";
-import "./style/PokedexStyles.css";
-import "./style/PokemonCardStyles.css";
-import "./style/PokedexIdStyles.css";
-import "./style/Error404Styles.css"
-import '../src/style/ListPokemonsStyles.css'
 import { Routes, Route } from "react-router-dom";
 import RootPath from "./components/home/RootPath";
 import PrivateRoute from './components/privateRoute/PrivateRoute'
 import Pokedex from "./components/pokedex/Pokedex";
-import PokedexId from "./components/pokedex/PokedexId";
+import PokedexId from "./components/pokedexId/PokedexId";
 import { useState } from "react";
 import Error from "./components/privateRoute/Error";
 

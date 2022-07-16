@@ -1,0 +1,231 @@
+.contenedor__pokeid{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-image: url(../../../assets/img-home/fondo-pokebola.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.pokeid__container-btn{
+    max-width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.container__pokeid-desktop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokeid__bn{
+    width: 40px;
+    padding: 5px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: #F2EDD7;
+    border: none;
+    box-shadow: 0 0 70px #FF8496;
+    cursor: pointer;
+}
+
+.pokeid__bn:hover{
+    background-color: #F28482;
+    color: #113B49;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.pokeid__img-text{
+    margin-top: 40px;
+    width: min(90%, 400px);
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(243, 242, 243,0.6);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.pokeid__img-text:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 0 3px #FF1A4A;
+}
+
+.img-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container img{
+    max-width: 70%;
+    object-fit: contain;
+}
+
+.pokeid__text{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.text__id-name{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text__id-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text__id-name-item{
+    margin: 0;
+    font-size: 1.3rem;
+    color: #113B49;
+}
+
+.pokeid__text-division{
+    max-width: 90%;
+    border: 1px solid #113B49;
+    box-shadow: 0 0 5px #F28482;
+}
+
+.text__weight-height{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text__item p {
+    margin: 0;
+    color: #113B49;
+    font-weight: 600;
+}
+
+.text__item span {
+    margin: 3px 0 0 0;
+    border: 1px solid #F28482;
+    width: 40px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px #113B49;
+}
+
+.pokeid__rasgos-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.type p{
+    margin: 0 0 10px 0;
+    color: #113B49;
+    font-weight: 600;
+}
+
+.type-name{
+    display: flex;
+    gap: 30px;
+}
+
+.type__name-item{
+    border: 1px solid #F28482;
+    padding: 5px;
+    width: 70px;
+    display:flex;
+    font-size: 0.9rem;
+    justify-content: center;
+    box-shadow: 0 0 3px #113B49;
+}
+
+.type-hability{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 10px 0;
+    gap: 10px;
+}
+
+.type-hability-item{
+    border: 1px solid #F28482;
+    padding: 5px;
+    width: 100px;
+    display:flex;
+    justify-content: center;
+    box-shadow: 0 0 3px #113B49;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 720px){
+    .container__pokeid-desktop{
+        display: contents;
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+
+    .pokeid__img-text{
+        width: min(90%, 400px);
+    }
+    
+    
+    .text__id-name-item{
+        font-size: 1.5rem;
+    }
+
+    .text__weight-height{
+        justify-content: space-evenly;
+    }
+
+    
+    .text__item p {
+        font-size: 1.3rem;
+    }
+    
+    .text__item span {
+        font-size: 1.1rem;
+    }
+
+    .type p{
+        font-size: 1.3rem;
+    }
+    
+
+    .type__name-item{
+        font-size: 1.1rem;
+    }
+    
+    
+    .type-hability-item{
+        width: 120px;
+        font-size: 1.1rem;
+    }
+}

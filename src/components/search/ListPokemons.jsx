@@ -1,7 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useRef } from "react";
+import "./style/styleList.css";
 
-const ListPokemons = ({setTypePokemon, setUrl}) => {
+const ListPokemons = ({ setTypePokemon, filterPokemons, setPagina }) => {
+  const list = useRef();
+  const rotate = useRef();
+
+  const openFilter = () => {
+    list.current.classList.toggle("open-list");
+    list.current.classList.toggle("close-list");
+    rotate.current.classList.toggle("rotate-icon-open");
+  };
+
+  const handleClick = type => {
+    setTypePokemon(type.name)
+    setTimeout(() => {
+      if(filterPokemons === 0){
+        console.log(filterPokemons);
+        setPagina(e => e + 1)
+      }
+    }, 100);
+  }
 
   const [typePokemons, setTypePokemons] = useState([]);
 
@@ -13,23 +33,31 @@ const ListPokemons = ({setTypePokemon, setUrl}) => {
   }, []);
 
   return (
-      <div className="container-types-list">
-        <div>
-          <p>Busca los pokemones basandote en su tipo!</p>
-        </div>
-        <button onClick={() => setUrl('https://pokeapi.co/api/v2/pokemon/?offset=1&limit=200')}>
-            Mostrar todos.
-        </button>
-        <div className='container-type-name-button'>
-        {
-          typePokemons.map(type => (
-            <div key={type.url} className='button-type'>
-            <button onClick={() => setTypePokemon(type.name)}>{type.name}</button>
-          </div>
-          ))
-        }
-        </div>
+    <div className="container-types-list">
+      <div className="btn-filter">
+        <span>Filter by type</span>
+        <i
+          ref={rotate}
+          onClick={openFilter}
+          className="fa-solid icon fa-arrow-right-from-bracket"
+        ></i>
       </div>
+
+      <div className="close-list container-list" ref={list}>
+        {typePokemons.map((type) => (
+          <ul className="list__show" key={type.url}>
+            <li
+              className="list__inside"
+              onClick={() => handleClick(type)}
+            >
+              <span href="#" className="nav__link nav__link--inside">
+                {type.name}
+              </span>
+            </li>
+          </ul>
+        ))}
+      </div>
+    </div>
   );
 };
 
